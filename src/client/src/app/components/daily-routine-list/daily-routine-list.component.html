@@ -1,0 +1,26 @@
+<mat-card>
+    <h2>日課一覧</h2>
+    <div *ngIf="dailyRoutines.length === 0; else contentBlock">
+        <mat-spinner></mat-spinner>
+    </div>
+    <ng-template #contentBlock>
+        <mat-table [dataSource]="dailyRoutines">
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+                <mat-cell *matCellDef="let record">{{record.id}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="time">
+                <mat-header-cell *matHeaderCellDef>時間</mat-header-cell>
+                <mat-cell *matCellDef="let record">
+                    {{record.startDateTime | date: 'H:mm'}}～{{record.endDateTime | date:'H:mm'}}
+                </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef>日課</mat-header-cell>
+                <mat-cell *matCellDef="let record">{{record.name}}</mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="tableHeaders"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: tableHeaders"></mat-row>
+        </mat-table>
+    </ng-template>
+</mat-card>

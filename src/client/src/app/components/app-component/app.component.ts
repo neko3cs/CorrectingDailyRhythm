@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'correcting-daily-rhythm-kun-client';
+  title = '生活リズム正すくん';
 }

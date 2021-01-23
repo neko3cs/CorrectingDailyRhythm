@@ -15,7 +15,7 @@ RUN apk update && \
     echo -e '\n#zsh-completions\nfpath=($HOME/.zsh/zsh-completions/src $fpath)\n' >> $HOME/.zshrc && \
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/neko3cs/.dotfiles/master/vim-install.sh)" && \
     curl -fsSL https://raw.githubusercontent.com/neko3cs/.dotfiles/master/.vimrc > $HOME/.vimrc && \
-    npm install --global @angular/cli@${ANGULAR_VERSION}
+    npm install --global @angular/cli@${ANGULAR_VERSION} json-server
 
 VOLUME [ "/usr/src" ]
 

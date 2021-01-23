@@ -21,4 +21,4 @@ VOLUME [ "/usr/src" ]
 
 WORKDIR /usr/src
 
-EXPOSE 4200
+EXPOSE 3000 4200

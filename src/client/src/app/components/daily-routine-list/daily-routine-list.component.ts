@@ -10,7 +10,7 @@ import { DailyRoutineService } from 'src/app/services/daily-routine.service';
 export class DailyRoutineListComponent implements OnInit {
 
   dailyRoutines: DailyRoutine[] = [];
-  tableHeaders: string[] = ['id', 'name', 'time'];
+  tableHeaders: string[] = ['id', 'time', 'name'];
   selectedId: number = 0;
 
   constructor(

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DailyRoutine } from 'src/app/data/daily-routine';
 import { DailyRoutineService } from 'src/app/services/daily-routine.service';
 
+// TODO: コンポーネント名を "DailyWorkList" にリネームする
 @Component({
   selector: 'app-daily-routine-list',
   templateUrl: './daily-routine-list.component.html',

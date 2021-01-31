@@ -1,4 +1,4 @@
-FROM node:lts-alpine AS dailyworks-app
+FROM node:lts-alpine AS dailyworks-devenv
 LABEL maintainer="neko3cs (https://github.com/neko3cs)"
 
 ARG ANGULAR_VERSION="11.0.4"

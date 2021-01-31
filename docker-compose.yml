@@ -1,9 +1,9 @@
 version: "3.8"
 
 services: 
-  app:
-    container_name: dailyworks-app
-    hostname: app
+  devenv:
+    container_name: dailyworks-devenv
+    hostname: devenv
     build: .
     ports: 
       - 3000:3000

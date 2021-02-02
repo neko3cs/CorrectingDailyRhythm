@@ -11,7 +11,7 @@ import { DailyRoutineService } from 'src/app/services/daily-routine.service';
 export class DailyRoutineListComponent implements OnInit {
 
   dailyRoutines: DailyRoutine[] = [];
-  tableHeaders: string[] = ['id', 'time', 'name'];
+  tableHeaders: string[] = ['time', 'name', 'delete'];
   selectedId: number = 0;
 
   constructor(
@@ -21,6 +21,10 @@ export class DailyRoutineListComponent implements OnInit {
   ngOnInit(): void {
     this.dailyRoutineService.getDailyRoutins()
       .subscribe(daliyRoutines => this.dailyRoutines = daliyRoutines);
+  }
+
+  deleteItem(id: number) {
+    // TODO: 削除処理の実装
   }
 
 }

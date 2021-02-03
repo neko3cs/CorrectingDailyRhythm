@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DailyRoutineListComponent } from './daily-routine-list.component';
+import { DailyRoutineListComponent } from './daily-work-list.component';
 
 describe('DailyRoutineListComponent', () => {
   let component: DailyRoutineListComponent;

@@ -1,4 +1,4 @@
-import { DailyRoutine } from './daily-routine';
+import { DailyRoutine } from './daily-work';
 
 describe('DailyRoutine', () => {
   it('should create an instance', () => {

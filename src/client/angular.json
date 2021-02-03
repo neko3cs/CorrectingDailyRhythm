@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "correcting-daily-rhythm-kun-client": {
+    "daily-works-client": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/correcting-daily-rhythm-kun-client",
+            "outputPath": "dist/daily-works-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "correcting-daily-rhythm-kun-client:build"
+            "browserTarget": "daily-works-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "correcting-daily-rhythm-kun-client:build:production"
+              "browserTarget": "daily-works-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "correcting-daily-rhythm-kun-client:build"
+            "browserTarget": "daily-works-client:build"
           }
         },
         "test": {
@@ -115,18 +115,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "correcting-daily-rhythm-kun-client:serve"
+            "devServerTarget": "daily-works-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "correcting-daily-rhythm-kun-client:serve:production"
+              "devServerTarget": "daily-works-client:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "correcting-daily-rhythm-kun-client",
+  "defaultProject": "daily-works-client",
   "cli": {
     "analytics": "2b2e13f1-34f3-4c7d-bcbd-06f9cf051c0e"
   }

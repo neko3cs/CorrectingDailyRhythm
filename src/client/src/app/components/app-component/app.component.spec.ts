@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'correcting-daily-rhythm-kun-client'`, () => {
+  it(`should have as title 'daily-works-client'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('correcting-daily-rhythm-kun-client');
+    expect(app.title).toEqual('daily-works-client');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('correcting-daily-rhythm-kun-client app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('daily-works-client app is running!');
   });
 });

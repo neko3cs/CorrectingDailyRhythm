@@ -1,7 +1,7 @@
-import { DailyRoutine } from './daily-work';
+import { DailyWork } from './daily-work';
 
-describe('DailyRoutine', () => {
+describe('DailyWork', () => {
   it('should create an instance', () => {
-    expect(new DailyRoutine(0, '', new Date(), new Date())).toBeTruthy();
+    expect(new DailyWork(0, '', new Date(), new Date())).toBeTruthy();
   });
 });

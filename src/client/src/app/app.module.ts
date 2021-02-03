@@ -11,13 +11,13 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app-component/app.component';
-import { DailyRoutineListComponent } from './components/daily-work-list/daily-work-list.component';
+import { DailyWorkListComponent } from './components/daily-work-list/daily-work-list.component';
 import { DailyWorkChartComponent } from './components/daily-work-chart/daily-work-chart.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    DailyRoutineListComponent,
+    DailyWorkListComponent,
     DailyWorkChartComponent
   ],
   imports: [

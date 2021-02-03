@@ -1,4 +1,4 @@
-export class DailyRoutine {
+export class DailyWork {
     constructor(
         public id: number,
         public name: string,

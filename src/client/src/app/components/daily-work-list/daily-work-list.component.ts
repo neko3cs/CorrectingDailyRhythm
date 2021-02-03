@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DailyRoutine } from 'src/app/data/daily-work';
-import { DailyRoutineService } from 'src/app/services/daily-work.service';
+import { DailyWork } from 'src/app/data/daily-work';
+import { DailyWorkService } from 'src/app/services/daily-work.service';
 
 // TODO: コンポーネント名を "DailyWorkList" にリネームする
 @Component({
@@ -8,14 +8,14 @@ import { DailyRoutineService } from 'src/app/services/daily-work.service';
   templateUrl: './daily-work-list.component.html',
   styleUrls: ['./daily-work-list.component.css']
 })
-export class DailyRoutineListComponent implements OnInit {
+export class DailyWorkListComponent implements OnInit {
 
-  dailyRoutines: DailyRoutine[] = [];
+  dailyRoutines: DailyWork[] = [];
   tableHeaders: string[] = ['time', 'name', 'delete'];
   selectedId: number = 0;
 
   constructor(
-    private dailyRoutineService: DailyRoutineService
+    private dailyRoutineService: DailyWorkService
   ) { }
 
   ngOnInit(): void {

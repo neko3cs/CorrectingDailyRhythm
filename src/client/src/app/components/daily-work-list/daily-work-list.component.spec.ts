@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DailyRoutineListComponent } from './daily-work-list.component';
+import { DailyWorkListComponent } from './daily-work-list.component';
 
-describe('DailyRoutineListComponent', () => {
-  let component: DailyRoutineListComponent;
-  let fixture: ComponentFixture<DailyRoutineListComponent>;
+describe('DailyWorkListComponent', () => {
+  let component: DailyWorkListComponent;
+  let fixture: ComponentFixture<DailyWorkListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DailyRoutineListComponent ]
+      declarations: [ DailyWorkListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DailyRoutineListComponent);
+    fixture = TestBed.createComponent(DailyWorkListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

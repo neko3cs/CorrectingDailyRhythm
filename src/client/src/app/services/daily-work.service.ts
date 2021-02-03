@@ -8,7 +8,7 @@ import { DailyWork } from '../data/daily-work';
 })
 export class DailyWorkService {
 
-  dailyRoutinUrlBase: string = 'http://localhost:3000/dailyRoutine';
+  dailyRoutinUrlBase: string = 'http://localhost:3000/dailyWork';
   dailyRoutinList: BehaviorSubject<DailyWork[]> = new BehaviorSubject<DailyWork[]>([]);
 
   constructor(

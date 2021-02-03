@@ -10,17 +10,17 @@ import { DailyWorkService } from 'src/app/services/daily-work.service';
 })
 export class DailyWorkListComponent implements OnInit {
 
-  dailyRoutines: DailyWork[] = [];
+  dailyWorks: DailyWork[] = [];
   tableHeaders: string[] = ['time', 'name', 'delete'];
   selectedId: number = 0;
 
   constructor(
-    private dailyRoutineService: DailyWorkService
+    private dailyWorkService: DailyWorkService
   ) { }
 
   ngOnInit(): void {
-    this.dailyRoutineService.getDailyRoutins()
-      .subscribe(daliyRoutines => this.dailyRoutines = daliyRoutines);
+    this.dailyWorkService.getDailyRoutins()
+      .subscribe(daliyRoutines => this.dailyWorks = daliyRoutines);
   }
 
   deleteItem(id: number) {

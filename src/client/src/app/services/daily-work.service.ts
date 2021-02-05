@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { DailyWork } from '../data/daily-work';
 
 @Injectable({
@@ -8,16 +9,27 @@ import { DailyWork } from '../data/daily-work';
 })
 export class DailyWorkService {
 
-  dailyRoutinUrlBase: string = 'http://localhost:3000/dailyWork';
-  dailyRoutinList: BehaviorSubject<DailyWork[]> = new BehaviorSubject<DailyWork[]>([]);
+  dailyWorksUrlBase: string = 'http://localhost:3000/dailyWork';
+  dailyWorks: BehaviorSubject<DailyWork[]> = new BehaviorSubject<DailyWork[]>([]);
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getDailyRoutins(): Observable<DailyWork[]> {
-    this.http.get<DailyWork[]>(this.dailyRoutinUrlBase)
-      .subscribe(products => this.dailyRoutinList.next(products));
-    return this.dailyRoutinList.asObservable();
+  getDailyWorks(): Observable<DailyWork[]> {
+    this.http.get<DailyWork[]>(this.dailyWorksUrlBase)
+      .subscribe(dailyWorks => this.dailyWorks.next(dailyWorks));
+    return this.dailyWorks.asObservable();
+  }
+
+  deleteDailyWork(deleted: DailyWork): Observable<DailyWork> {
+    return this.http.delete<DailyWork>(
+      `${this.dailyWorksUrlBase}/${deleted.id}`,
+      { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) })
+      .pipe(tap(deleted => {
+        const newDailyWorks = this.dailyWorks.getValue()
+          .filter(dailyWork => dailyWork.id !== deleted.id);
+        this.dailyWorks.next(newDailyWorks);
+      }));
   }
 }

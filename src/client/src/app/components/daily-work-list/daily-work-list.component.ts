@@ -18,8 +18,8 @@ export class DailyWorkListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.dailyWorkService.getDailyRoutins()
-      .subscribe(daliyRoutines => this.dailyWorks = daliyRoutines);
+    this.dailyWorkService.getDailyWorks()
+      .subscribe(daliyWorks => this.dailyWorks = daliyWorks);
   }
 
   deleteItem(id: number) {

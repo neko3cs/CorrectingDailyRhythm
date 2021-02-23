@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 import { DailyWork } from '../data/daily-work';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { DailyWork } from '../data/daily-work';
 })
 export class DailyWorkService {
 
-  dailyWorksUrlBase: string = 'http://localhost:3000/dailyWork';
+  dailyWorksUrlBase: string = `${environment.host}/dailyWork`;
   dailyWorks: BehaviorSubject<DailyWork[]> = new BehaviorSubject<DailyWork[]>([]);
 
   constructor(

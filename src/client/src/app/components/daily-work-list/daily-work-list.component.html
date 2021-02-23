@@ -18,7 +18,7 @@
             <ng-container matColumnDef="delete">
                 <mat-header-cell *matHeaderCellDef>削除</mat-header-cell>
                 <mat-cell *matCellDef="let record">
-                    <button mat-button (onclick)="deleteItem(record.id)">削除</button>
+                    <button mat-button (onclick)="deleteDailyWork(record)">削除</button>
                 </mat-cell>
             </ng-container>
             <mat-header-row *matHeaderRowDef="tableHeaders"></mat-header-row>

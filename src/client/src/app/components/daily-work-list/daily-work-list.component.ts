@@ -22,8 +22,8 @@ export class DailyWorkListComponent implements OnInit {
       .subscribe(daliyWorks => this.dailyWorks = daliyWorks);
   }
 
-  deleteItem(id: number) {
-    // TODO: 削除処理の実装
+  deleteDailyWork(work: DailyWork) {
+    // TODO: 削除処理の追加
   }
 
 }

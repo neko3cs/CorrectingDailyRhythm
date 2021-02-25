@@ -23,8 +23,8 @@ export class DailyWorkService {
     return this.dailyWorks.asObservable();
   }
 
-  deleteDailyWork(deleted: DailyWork): Observable<DailyWork> {
-    return this.http.delete<DailyWork>(
+  deleteDailyWork(deleted: DailyWork): Observable<DailyWork[]> {
+    this.http.delete<DailyWork>(
       `${this.dailyWorksUrlBase}/${deleted.id}`,
       { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) })
       .pipe(tap(deleted => {
@@ -32,5 +32,6 @@ export class DailyWorkService {
           .filter(dailyWork => dailyWork.id !== deleted.id);
         this.dailyWorks.next(newDailyWorks);
       }));
+    return this.dailyWorks.asObservable();
   }
 }

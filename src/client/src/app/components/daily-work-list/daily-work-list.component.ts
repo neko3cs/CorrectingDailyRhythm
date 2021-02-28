@@ -22,10 +22,8 @@ export class DailyWorkListComponent implements OnInit {
       .subscribe(daliyWorks => this.dailyWorks = daliyWorks);
   }
 
-  // FIXME: 消えないので直す
   deleteDailyWork(dailyWork: DailyWork) {
-    this.dailyWorkService.deleteDailyWork(dailyWork)
-      .subscribe(daliyWorks => this.dailyWorks = daliyWorks);
+    // TODO: 実装する
   }
 
 }

@@ -10,8 +10,8 @@ import { DailyWork } from '../data/daily-work';
 })
 export class DailyWorkService {
 
-  dailyWorksUrlBase: string = `${environment.host}/dailyWork`;
-  dailyWorks: BehaviorSubject<DailyWork[]> = new BehaviorSubject<DailyWork[]>([]);
+  private dailyWorksUrlBase: string = `${environment.host}/dailyWork`;
+  private dailyWorks: BehaviorSubject<DailyWork[]> = new BehaviorSubject<DailyWork[]>([]);
 
   constructor(
     private http: HttpClient
